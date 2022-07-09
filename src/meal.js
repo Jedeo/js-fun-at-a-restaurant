@@ -16,9 +16,11 @@ function createMenuItem(name, price, type) {
 
 function addIngredients(nameOfIngredient,ingredients){
   for (let element of ingredients)
-    if(element === nameOfIngredient)
+    if(element === nameOfIngredient){
       return null;
-  return ingredients.push(nameOfIngredient);;
+    }else{
+      return ingredients.push(nameOfIngredient);
+    }
 
 }
 
