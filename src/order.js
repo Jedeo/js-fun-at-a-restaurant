@@ -30,12 +30,11 @@ function listItems(deliveryOrders) {
 }
 
 function searchOrder(deliveryOrders, orderItem){
-  //let isOrIsNotInList = true;
   for(let i = 0; i < deliveryOrders.length; i++)
     if(deliveryOrders[i].item === orderItem){
       return true;
     }
-  return false;//isOrIsNotInList;
+  return false;
 
   }
 

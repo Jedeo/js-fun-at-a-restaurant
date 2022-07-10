@@ -18,10 +18,8 @@ function addIngredients(nameOfIngredient,ingredients){
   for (let element of ingredients)
     if(element === nameOfIngredient){
       return null;
-    }else{
-      return ingredients.push(nameOfIngredient);
     }
-
+  return ingredients.push(nameOfIngredient);
 }
 
 function formatPrice(foodPrice){
@@ -30,8 +28,6 @@ function formatPrice(foodPrice){
 
 }
 
-
-
 function decreasePrice(foodPrice){
 
   return foodPrice - (foodPrice / 10) ;
@@ -39,7 +35,6 @@ function decreasePrice(foodPrice){
 
 
 function createRecipe(title, ingredients, type){
-
   let recipe = {
     title: title,
     ingredients:ingredients,
