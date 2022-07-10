@@ -20,36 +20,29 @@ function addMenuItem(pizzaRestaurant,newItem) {
 }
 
 // function removeMenuItem(menuToEdit, nameOfMenu, itemToRemove){
-function removeMenuItem(menuToEdit, name, type){
-  var breakfastMenu = menuToEdit.menus["breakfast"];
-  //console.log(breakfastMenu);
-  breakfastMenu = [];
-  console.log(menuToEdit);
-}
+function removeMenuItem(restaurant, nameToRemove, typeOfMenu){
 
-  //for in loop to look into the Object
-  //check for the item we want to remove useing an if statement
-  //remove items
-  //print the string and interpolation
-//  console.log(menuToEdit.menus[whereToRemoveItem] );
-  // for (let i = 0; i < menuToEdit.length; i++){
-  //   if(!menuToEdit.menus){
-  //     return menuToEdit;
-  //   }else {
-  //     return "else" + [];
-  //   }
-  // }
-  // if(menuToEdit.menus.whereToRemoveItem) {
-  //
-  // }
+    let myIndex = restaurant.menus[typeOfMenu][0];
+    //console.log(Object.values(restaurant.menus[typeOfMenu][0]));
 
-//   if(!menuToEdit.menus[itemToRemove]){
-//     return menuToEdit.menus[itemToRemove]
-//   }else {
-//     return menuToEdit.menus[itemToRemove] = [] + "No one is eating our Bacon and Eggs Pizza - it has been removed from the breakfast menu!";
-//   }
-// }
 
+    let lenthOfMenu = Object.values(restaurant.menus[typeOfMenu]).length;
+
+
+    //console.log("DEBUG My INDEX");
+    //console.log(myIndex);
+
+    for(let i = 0; i <= lenthOfMenu; i++){
+      console.log([i], restaurant.menus[typeOfMenu][i].name);
+      if(Object.values(restaurant.menus[typeOfMenu])[i].name === nameToRemove){
+         //myIndex = restaurant.menus[typeOfMenu].indexOf(nameToRemove);
+        restaurant.menus[typeOfMenu].splice([i], 1);
+        //console.log(restaurant.menus);
+        return `No one is eating our ${nameToRemove} - it has been removed from the ${typeOfMenu} menu!`;
+      }
+    }
+    return `Sorry, we don't sell ${nameToRemove}, try adding a new recipe!`;
+ }
 
 module.exports = {
    createRestaurant,
