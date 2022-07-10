@@ -48,7 +48,7 @@ describe("Chef (class)", function() {
     assert.equal(scott.greetCustomer("Pam"), "Hello, Pam!");
   });
 
-  it.skip('should greet a customer differently if it is morning', function () {
+  it('should greet a customer differently if it is morning', function () {
     var casey = new Chef("Casey");
 
     assert.equal(casey.greetCustomer("Scott"), "Hello, Scott!");
@@ -56,7 +56,7 @@ describe("Chef (class)", function() {
     assert.equal(casey.greetCustomer("Hannah", false), "Hello, Hannah!");
   });
 
-  it.skip("should confirm if a requested item is on the menu", function() {
+  it("should confirm if a requested item is on the menu", function() {
     var restaurant = createRestaurant("Average Bakery");
     var chef = new Chef("Hannah", restaurant);
 
