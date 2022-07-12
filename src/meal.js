@@ -2,6 +2,13 @@ function nameMenuItem(nameOffood) {
   return `Delicious ${nameOffood}`
 }
 
+nameMenuItem(5);
+
+
+
+
+
+
 
 function createMenuItem(name, price, type) {
   var menuItem = {

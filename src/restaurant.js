@@ -21,9 +21,9 @@ function addMenuItem(pizzaRestaurant,newItem) {
 
 // function removeMenuItem(menuToEdit, nameOfMenu, itemToRemove){
 function removeMenuItem(restaurant, nameToRemove, typeOfMenu){
-    let lengthOfMenu = Object.values(restaurant.menus[typeOfMenu]).length;
+    let lengthOfMenu = restaurant.menus[typeOfMenu].length;
     for(let i = 0; i < lengthOfMenu; i++){
-      if(Object.values(restaurant.menus[typeOfMenu])[i].name === nameToRemove){
+      if(restaurant.menus[typeOfMenu][i].name === nameToRemove){
         restaurant.menus[typeOfMenu].splice([i], 1);
         return `No one is eating our ${nameToRemove} - it has been removed from the ${typeOfMenu} menu!`;
       }
